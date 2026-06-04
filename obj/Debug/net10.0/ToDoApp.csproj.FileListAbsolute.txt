@@ -1,0 +1,14 @@
+/Users/meng/Documents/GitHub/ToDoApp/bin/Debug/net10.0/ToDoApp
+/Users/meng/Documents/GitHub/ToDoApp/bin/Debug/net10.0/ToDoApp.deps.json
+/Users/meng/Documents/GitHub/ToDoApp/bin/Debug/net10.0/ToDoApp.runtimeconfig.json
+/Users/meng/Documents/GitHub/ToDoApp/bin/Debug/net10.0/ToDoApp.dll
+/Users/meng/Documents/GitHub/ToDoApp/bin/Debug/net10.0/ToDoApp.pdb
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.AssemblyInfoInputs.cache
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.AssemblyInfo.cs
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.csproj.CoreCompileInputs.cache
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.dll
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/refint/ToDoApp.dll
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.pdb
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ToDoApp.genruntimeconfig.cache
+/Users/meng/Documents/GitHub/ToDoApp/obj/Debug/net10.0/ref/ToDoApp.dll
