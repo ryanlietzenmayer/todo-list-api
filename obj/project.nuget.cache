@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NZ8Tn8GqNNA=",
+  "dgSpecHash": "xL3L777USKs=",
   "success": true,
-  "projectFilePath": "/Users/meng/Documents/GitHub/ToDoApp/ToDoApp.csproj",
+  "projectFilePath": "/Users/meng/Documents/GitHub/todo-list-api/ToDoApp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

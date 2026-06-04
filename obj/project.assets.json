@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/meng/Documents/GitHub/ToDoApp/ToDoApp.csproj",
+      "projectUniqueName": "/Users/meng/Documents/GitHub/todo-list-api/ToDoApp.csproj",
       "projectName": "ToDoApp",
-      "projectPath": "/Users/meng/Documents/GitHub/ToDoApp/ToDoApp.csproj",
+      "projectPath": "/Users/meng/Documents/GitHub/todo-list-api/ToDoApp.csproj",
       "packagesPath": "/Users/meng/.nuget/packages/",
-      "outputPath": "/Users/meng/Documents/GitHub/ToDoApp/obj/",
+      "outputPath": "/Users/meng/Documents/GitHub/todo-list-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/meng/.nuget/NuGet/NuGet.Config"
