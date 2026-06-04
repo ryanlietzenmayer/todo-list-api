@@ -7,9 +7,3 @@ class Program
     {
     }
 }
-
-// GET
-// GET ALL
-// POST
-// PUT
-// DELETE
