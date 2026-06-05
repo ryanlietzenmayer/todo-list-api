@@ -23,9 +23,9 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.MapControllers();
 
-var summaries = new[]
+var todoSamples = new[]
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+    "Milk", "Cheddar", "Yogurt", "Butter", "Brie", "Cream", "Mozzarrralalla", "Almond Milk"
 };
 
 app.MapGet("/tasks", () =>
@@ -36,7 +36,7 @@ app.MapGet("/tasks", () =>
         new WeatherForecast
         (
             Random.Shared.Next(-200, 5500),
-            summaries[Random.Shared.Next(summaries.Length)],
+            todoSamples[Random.Shared.Next(todoSamples.Length)],
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
             true

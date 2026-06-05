@@ -11,6 +11,10 @@ using Todo.Models.ViewModels;
 
 namespace Todo.Controllers
 {
+
+// [Route("api/")]
+// [ApiController]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -127,7 +131,7 @@ namespace Todo.Controllers
                     }
                 }
             }
-            return Redirect("https://localhost:5001/");
+            return Redirect("https://localhost:5041/");
         }
 
         [HttpPost]
@@ -167,7 +171,7 @@ namespace Todo.Controllers
                 }
             }
 
-            return Redirect("https://localhost:5001/");
+            return Redirect("https://localhost:5041/");
         }
     }
 }
