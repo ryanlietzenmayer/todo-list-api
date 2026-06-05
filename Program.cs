@@ -1,19 +1,18 @@
 var builder = WebApplication.CreateBuilder(args);
-Console.WriteLine("ltz CreateBuilder!"); // Prints with newline
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-Console.WriteLine("ltz builder.Build!"); // Prints with newline
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    Console.WriteLine("ltz MapOpenApi!"); // Prints with newline
-
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.MapOpenApi();
 }
 
@@ -26,7 +25,7 @@ var summaries = new[]
 
 app.MapGet("/tasks", () =>
 {
-    Console.WriteLine("ltz MapGetWeatherforcast!"); // Prints with newline
+    Console.WriteLine("GET /tasks hit");
 
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
@@ -43,7 +42,6 @@ app.MapGet("/tasks", () =>
 .WithName("GetWeatherForecast");
 
 app.Run();
-Console.WriteLine("ltz below Run!"); // Prints with newline
 
 record WeatherForecast(int Id, 
                         String TaskDescription,

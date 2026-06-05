@@ -2,6 +2,8 @@
 
 Built with .NET 10 and VSCode.
 
+Swagger: http://localhost:5041/swagger/index.html
+
 # To-Do API Specifications
 ---
 This is a proposal for a 'To-Do List' API that will allow the user to manage tasks on a to-do list. They will have to ability to create new tasks as well as update or delete existing ones. 
