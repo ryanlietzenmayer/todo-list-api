@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "T9bpdd2v6Ns=",
+  "dgSpecHash": "VL3/fx3PGLc=",
   "success": true,
   "projectFilePath": "/Users/meng/Documents/GitHub/todo-list-api/ToDoApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/meng/.nuget/packages/microsoft.entityframeworkcore/10.0.8/microsoft.entityframeworkcore.10.0.8.nupkg.sha512",
+    "/Users/meng/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.8/microsoft.entityframeworkcore.abstractions.10.0.8.nupkg.sha512",
+    "/Users/meng/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.8/microsoft.entityframeworkcore.analyzers.10.0.8.nupkg.sha512"
+  ],
   "logs": []
 }
