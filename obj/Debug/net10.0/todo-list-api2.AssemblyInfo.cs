@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("todo-list-api2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0cf54767566f69341fa995ed64440d4a886683f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c04db4d627dc264340028253fca50e07304d419")]
 [assembly: System.Reflection.AssemblyProductAttribute("todo-list-api2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("todo-list-api2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

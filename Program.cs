@@ -33,7 +33,7 @@ app.MapGet("/tasks", () =>
     Console.WriteLine("GET /tasks hit");
 
     var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
+        new ToDoTask
         (
             Random.Shared.Next(-200, 5500),
             todoSamples[Random.Shared.Next(todoSamples.Length)],
@@ -44,11 +44,11 @@ app.MapGet("/tasks", () =>
         .ToArray();
     return forecast;
 })
-.WithName("GetWeatherForecast");
+.WithName("GetToDoTask");
 
 app.Run();
 
-record WeatherForecast(int Id, 
+record ToDoTask(int Id, 
                         String TaskDescription,
                         DateOnly CreatedDate,
                         DateOnly DueDate, 
