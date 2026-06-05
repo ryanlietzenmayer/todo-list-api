@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -16,7 +17,11 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+// good to have but idc for this purpose
 // app.UseHttpsRedirection();
+
+app.UseRouting();
+app.MapControllers();
 
 var summaries = new[]
 {
