@@ -1,11 +1,19 @@
+using Microsoft.EntityFrameworkCore;
+using TodoApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<TodoContext>(opt =>
+    opt.UseInMemoryDatabase("TodoList"));
+
 
 var app = builder.Build();
 
@@ -20,31 +28,31 @@ if (app.Environment.IsDevelopment())
 // good to have but idc for this purpose
 // app.UseHttpsRedirection();
 
-app.UseRouting();
+// app.UseRouting();
 app.MapControllers();
 
-var todoSamples = new[]
-{
-    "Milk", "Cheddar", "Yogurt", "Butter", "Brie", "Cream", "Mozzarrralalla", "Almond Milk"
-};
+// var todoSamples = new[]
+// {
+//     "Milk", "Cheddar", "Yogurt", "Butter", "Brie", "Cream", "Mozzarrralalla", "Almond Milk"
+// };
 
-app.MapGet("/tasks", () =>
-{
-    Console.WriteLine("GET /tasks hit");
+// app.MapGet("/tasks", () =>
+// {
+//     Console.WriteLine("GET /tasks hit");
 
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new ToDoTask
-        (
-            Random.Shared.Next(-200, 5500),
-            todoSamples[Random.Shared.Next(todoSamples.Length)],
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            true
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetToDoTask");
+//     var forecast = Enumerable.Range(1, 5).Select(index =>
+//         new ToDoTask
+//         (
+//             Random.Shared.Next(-200, 5500),
+//             todoSamples[Random.Shared.Next(todoSamples.Length)],
+//             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+//             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+//             true
+//         ))
+//         .ToArray();
+//     return forecast;
+// })
+// .WithName("GetToDoTask");
 
 app.Run();
 

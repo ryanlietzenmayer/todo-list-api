@@ -1,7 +1,0 @@
--- SQLite
-CREATE TABLE todo (
-Id INTEGER PRIMARY KEY AUTOINCREMENT,
-TaskDescription TEXT,
-Completed INTEGER,
-CreatedDate TEXT,
-DueDate TEXT)
