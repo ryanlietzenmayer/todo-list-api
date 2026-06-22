@@ -22,7 +22,7 @@ public class TasksController : ControllerBase
         return await _context.TodoItems.ToListAsync();
     }
 
-    // GET: tasks/5
+    // GET: tasks/{id}
     [HttpGet("{id}")]
     public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
     {
@@ -44,6 +44,52 @@ public class TasksController : ControllerBase
         await _context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(GetTodoItem), new { id = todoItem.Id }, todoItem);
+    }
+
+    // PUT: tasks/{id}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
+    {
+        if (id != todoItem.Id)
+        {
+            return BadRequest();
+        }
+
+        _context.Entry(todoItem).State = EntityState.Modified;
+
+        try
+        {
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!TodoItemExists(id))
+            {
+                return NotFound();
+            }
+            else
+            {
+                throw;
+            }
+        }
+
+        return NoContent();
+    }
+
+    // DELETE: tasks/{id}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTodoItem(long id)
+    {
+        var todoItem = await _context.TodoItems.FindAsync(id);
+        if (todoItem == null)
+        {
+            return NotFound();
+        }
+
+        _context.TodoItems.Remove(todoItem);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 
     private bool TodoItemExists(long id)
