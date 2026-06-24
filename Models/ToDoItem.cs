@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace TodoApi.Models;
     public class TodoItem
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public required string TaskDescription { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime DueDate { get; set; }
