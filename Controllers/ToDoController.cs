@@ -48,7 +48,7 @@ public class TasksController : ControllerBase
 
     // PUT: tasks/{id}
     [HttpPut("{id}")]
-    public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
+    public async Task<ActionResult<TodoItem>> PutTodoItem(long id, TodoItem todoItem)
     {
         if (id != todoItem.Id)
         {
@@ -73,7 +73,7 @@ public class TasksController : ControllerBase
             }
         }
 
-        return NoContent();
+        return todoItem;
     }
 
     // DELETE: tasks/{id}
